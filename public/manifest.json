@@ -1,0 +1,9 @@
+{
+  "short_name": "Movies Browser",
+  "name": "Movies Browser created in React using TMDB movies database",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
