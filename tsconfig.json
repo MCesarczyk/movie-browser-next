@@ -1,0 +1,15 @@
+{
+  "exclude": [
+    "packages/**/tests/**",
+    "packages/**/dist/**",
+    "packages/**/build/**"
+  ],
+  "references": [
+    {
+      "path": "./packages/spa"
+    },
+    {
+      "path": "./packages/ui"
+    }
+  ]
+}

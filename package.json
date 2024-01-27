@@ -8,6 +8,15 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/spa"
-  ]
+    "packages/*"
+  ],
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "spa": "yarn workspace spa dev",
+    "ui": "yarn workspace ui dev",
+    "dev": "concurrently --kill-others-on-fail \"yarn spa\" \"yarn ui\"",
+    "storybook": "concurrently --kill-others-on-fail \"yarn workspace spa storybook\" \"yarn workspace ui storybook\""
+  }
 }
