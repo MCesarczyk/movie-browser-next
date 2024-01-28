@@ -4,7 +4,7 @@ import { LoadingCircle } from "./LoadingCircle";
 import styled from "styled-components";
 
 const meta = {
-  title: "Example/LoadingCircle",
+  title: "Atoms/LoadingCircle",
   component: LoadingCircle,
   tags: ["autodocs"],
   parameters: {

@@ -7,7 +7,7 @@ export const LoadingBar = () => (
   </LoadingBarBody>
 );
 
-export const LoadingBarBody = styled.div`
+const LoadingBarBody = styled.div`
   background-color: ${({theme})=>theme.color.black};
   height: 8px;
   display: flex;
@@ -15,7 +15,7 @@ export const LoadingBarBody = styled.div`
   margin-top: -8px;
 `;
 
-export const LoadingBarSlider = styled.div`
+const LoadingBarSlider = styled.div`
   background-color: ${({theme})=>theme.color.scienceBlue};
   height: 100%;
   width: 120px;

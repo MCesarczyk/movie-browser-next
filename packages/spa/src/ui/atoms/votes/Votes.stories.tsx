@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { ComponentProps } from "react";
 
 const meta = {
-  title: "Example/Votes",
+  title: "Atoms/Votes",
   component: Votes,
   tags: ["autodocs"],
   parameters: {

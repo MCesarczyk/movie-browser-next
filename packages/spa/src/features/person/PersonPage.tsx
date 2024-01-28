@@ -1,14 +1,14 @@
 import { lazy, Suspense, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { Wrapper } from "common/Wrapper";
 import Tile from "core/Tile";
 import { CorePage } from "core/CorePage";
 import { ActingMovieDetailed } from "./interfaces";
 import { usePersonApiService } from "./personApiService";
 import { ImagesConfigContext } from "services/ImagesConfigContext";
 import { Loader } from "ui/atoms";
-const Section = lazy(() => import("common/Section"));
+import { Wrapper } from "ui/atoms/wrapper";
+const Section = lazy(() => import("ui/organisms/section"));
 
 export const PersonPage = () => {
   const { id }: any = useParams();
@@ -71,10 +71,8 @@ export const PersonPage = () => {
           />
           <Suspense fallback={<Loader />}>
             {personCast && personCast.length > 0 && (
-              <Section
-                title={`Cast (${personCast.length})`}
-                itemsList={
-                  personCast &&
+              <Section title={`Cast (${personCast.length})`}>
+                {personCast &&
                   personCast.map((movie: ActingMovieDetailed) => (
                     // @ts-ignore
                     <Tile
@@ -101,15 +99,12 @@ export const PersonPage = () => {
                       rating={movie.vote_average}
                       votes={movie.vote_count}
                     />
-                  ))
-                }
-              />
+                  ))}
+              </Section>
             )}
             {personCrew && personCrew.length > 0 && (
-              <Section
-                title={`Crew (${personCrew.length})`}
-                itemsList={
-                  personCrew &&
+              <Section title={`Crew (${personCrew.length})`}>
+                {personCrew &&
                   personCrew.map((movie: ActingMovieDetailed) => (
                     // @ts-ignore
                     <Tile
@@ -135,9 +130,8 @@ export const PersonPage = () => {
                       rating={movie.vote_average}
                       votes={movie.vote_count}
                     />
-                  ))
-                }
-              />
+                  ))}
+              </Section>
             )}
           </Suspense>
         </Wrapper>

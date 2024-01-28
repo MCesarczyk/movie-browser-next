@@ -1,6 +1,6 @@
-import { Header } from "common/Header";
-import { Wrapper } from "common/Wrapper";
 import { Loader } from "ui/atoms";
+import { Header } from "ui/atoms/header";
+import { Wrapper } from "ui/atoms/wrapper";
 
 interface LoadingPageProps {
     message: string;

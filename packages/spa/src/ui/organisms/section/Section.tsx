@@ -1,22 +1,21 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-import { Wrapper } from "common/Wrapper";
-import { Header } from "common/Header";
-
+import { Header } from "ui/atoms/header";
+import { Wrapper } from "ui/atoms/wrapper";
 
 interface SectionProps {
     title: string;
-    itemsList: ReactNode[] | null;
-    isObsolete?: boolean;
+    children?: ReactNode;
+    isStale?: boolean;
 };
 
-const Section = ({ title, itemsList, isObsolete }: SectionProps) => {
+const Section = ({ title, children, isStale }: SectionProps) => {
     return (
         <Wrapper>
             <Header>{title}</Header>
-            <SectionInnerContainer isObsolete={!!isObsolete}>
-                {itemsList}
+            <SectionInnerContainer isStale={!!isStale}>
+                {children}
             </SectionInnerContainer>
         </Wrapper>
     );
@@ -24,11 +23,11 @@ const Section = ({ title, itemsList, isObsolete }: SectionProps) => {
 
 export default Section;
 
-const SectionInnerContainer = styled.div<{ isObsolete: boolean }>`
+const SectionInnerContainer = styled.div<{ isStale: boolean }>`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    filter: ${({ isObsolete }) => isObsolete ? 'brightness(0.9)' : 'none'};
+    filter: ${({ isStale }) => isStale ? 'brightness(0.9)' : 'none'};
     gap: 24px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mediumScreen}) {

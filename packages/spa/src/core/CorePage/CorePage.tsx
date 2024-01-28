@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
-import { LoadingBar } from 'common/LoadingBar';
 import { ErrorPage } from './ErrorPage/ErrorPage';
 import LoadingPage from './LoadingPage';
 import NoResultsPage from './NoResultsPage';
+import { LoadingBar } from 'ui/atoms/loadingBar';
 
 interface ContentWrapperProps {
     status: string;

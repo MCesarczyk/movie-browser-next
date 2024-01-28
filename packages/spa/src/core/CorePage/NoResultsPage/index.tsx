@@ -1,7 +1,7 @@
-import { Header } from "common/Header";
-import { Wrapper } from "common/Wrapper";
 import { NoResultsLogo } from "./styled";
 import noResults from "./noResults.svg";
+import { Header } from "ui/atoms/header";
+import { Wrapper } from "ui/atoms/wrapper";
 
 
 interface NoResultsPageProps {
