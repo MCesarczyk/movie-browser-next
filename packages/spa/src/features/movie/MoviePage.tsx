@@ -1,13 +1,13 @@
 import React, { Suspense, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import LoadingCircle from "common/LoadingCircle";
 import { Wrapper } from "common/Wrapper";
-import Tile from "core/Tile"
+import Tile from "core/Tile";
 import { CorePage } from "core/CorePage";
 import { Backdrop } from "./Backdrop";
 import { useMovieApiService } from "./movieApiService";
 import { ImagesConfigContext } from "services/ImagesConfigContext";
+import { Loader } from "ui/atoms";
 const Section = React.lazy(() => import('common/Section'));
 
 
@@ -95,7 +95,7 @@ export const MoviePage = () => {
                             votes={movieDetails.vote_count}
                             overview={movieDetails.overview}
                         />
-                        <Suspense fallback={<LoadingCircle />}>
+                        <Suspense fallback={<Loader />}>
                             {movieCast && movieCast.length > 0 &&
                                 <Section
                                     title="Cast"

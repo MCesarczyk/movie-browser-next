@@ -11,5 +11,21 @@
     {
       "path": "./packages/ui"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "packages/types",
+    "outDir": "packages/types",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": [
+        "packages/spa/src/*"
+      ],
+      "@ui/*": [
+        "packages/ui/src/*"
+      ]
+    }
+  }
 }

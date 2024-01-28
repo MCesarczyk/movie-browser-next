@@ -1,7 +1,6 @@
 import { Header } from "common/Header";
 import { Wrapper } from "common/Wrapper";
-import LoadingCircle from "common/LoadingCircle";
-
+import { Loader } from "ui/atoms";
 
 interface LoadingPageProps {
     message: string;
@@ -13,7 +12,7 @@ const LoadingPage = ({ message, query }: LoadingPageProps) => (
         <Header>
             {query ? `Search results for "${query}"` : message}
         </Header>
-        <LoadingCircle />
+        <Loader />
     </Wrapper>
 );
 
