@@ -31,7 +31,7 @@
     "deploy": "gh-pages -d build",
     "storybook": "storybook dev -p 6100",
     "build-storybook": "storybook build",
-    "tailwind:watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "tailwind:watch": "npx tailwindcss -i ./src/index.css -o ./src/output.css --watch"
   },
   "eslintConfig": {
     "extends": [
