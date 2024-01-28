@@ -63,10 +63,10 @@ export const Item = styled.li`
   }
 `;
 
-const activeClassName = "active";
+const $activeClassName = "active";
 
 export const StyledNavLink = styled(NavLink).attrs(() => ({
-  activeClassName,
+  $activeClassName,
 }))`
   
   color: ${({ theme }) => theme.color.white};
@@ -85,7 +85,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
     border: 1px solid ${({ theme }) => theme.color.stormGrey};
   }
   
-  &.${activeClassName} {
+  &.${$activeClassName} {
     border: 1px solid ${({ theme }) => theme.color.white};
   }
 
