@@ -10,7 +10,7 @@ import { theme } from 'theme';
 import reportWebVitals from 'reportWebVitals';
 import { ImagesConfigProvider } from 'services/ImagesConfigContext';
 import { App } from 'App';
-import 'index.css';
+import './index.css';
 
 
 const queryClient = new QueryClient({

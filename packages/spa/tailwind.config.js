@@ -5,12 +5,12 @@ module.exports = {
     extend: {
       keyframes: {
         slide: {
-          "0%": "{ margin-left: 0 }",
-          "100%": "{ margin-left: calc(100% - 120px) }",
+          "0%": { marginLeft: 0 },
+          "100%": { marginLeft: 'calc(100% - 120px)' },
         },
       },
       animation: {
-        slide: "slide 1s linear infinite;",
+        slide: "slide 1s ease-out infinite;",
       },
     },
   },

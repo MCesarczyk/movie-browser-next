@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from "@storybook/react";
 
 import { LoadingCircle } from "./LoadingCircle";
-import styled from "styled-components";
+import { ComponentProps } from "react";
 
 const meta = {
   title: "Atoms/LoadingCircle",
@@ -17,25 +17,18 @@ const meta = {
         describe: "Color of the element",
       },
     },
-    cycleTime: {
-      control: {
-        type: "number",
-        describe: "Time it takes for the loader to complete one cycle",
-      },
-    },
   },
 } satisfies Meta<typeof LoadingCircle>;
 
 export default meta;
 
-const Template: StoryFn<typeof meta> = (args) => (
-  <Wrapper>
+const Template: StoryFn<ComponentProps<typeof LoadingCircle>> = (args) => (
+  <div className="h-48 text-center w-full">
     <LoadingCircle {...args} />
-  </Wrapper>
+  </div>
 );
 
 export const _LoadingCircle = Template.bind({});
-
-const Wrapper = styled.div`
-  height: 200px;
-`;
+_LoadingCircle.args = {
+  color: "current",
+};
