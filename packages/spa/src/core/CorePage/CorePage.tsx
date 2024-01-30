@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
 import { ErrorPage } from "./ErrorPage/ErrorPage";
-import LoadingPage from "./LoadingPage";
-import NoResultsPage from "./NoResultsPage";
+import { LoadingPage } from "./LoadingPage/LoadingPage";
+import { NoResultsPage } from "./NoResultsPage/NoResultsPage";
 import { LoadingBar } from "ui/atoms/loadingBar";
 
 interface ContentWrapperProps {

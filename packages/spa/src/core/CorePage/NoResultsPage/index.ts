@@ -1,0 +1,1 @@
+export { NoResultsPage } from './NoResultsPage';

@@ -7,7 +7,6 @@ import { Fallback } from "core/CorePage/ErrorPage/Fallback";
 const meta = {
   title: "Pages/ErrorPage",
   component: ErrorPage,
-  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },

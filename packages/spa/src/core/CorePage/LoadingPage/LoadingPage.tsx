@@ -7,7 +7,7 @@ interface LoadingPageProps {
     query: string | null | undefined;
 };
 
-const LoadingPage = ({ message, query }: LoadingPageProps) => (
+export const LoadingPage = ({ message, query }: LoadingPageProps) => (
     <Wrapper>
         <Header>
             {query ? `Search results for "${query}"` : message}
@@ -15,5 +15,3 @@ const LoadingPage = ({ message, query }: LoadingPageProps) => (
         <Loader />
     </Wrapper>
 );
-
-export default LoadingPage;
