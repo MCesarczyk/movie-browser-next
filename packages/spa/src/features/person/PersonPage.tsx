@@ -1,7 +1,7 @@
 import { lazy, Suspense, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import Tile from "core/Tile";
+import Tile from "core/Tile/Tiles";
 import { CorePage } from "core/CorePage";
 import { ActingMovieDetailed } from "./interfaces";
 import { usePersonApiService } from "./personApiService";

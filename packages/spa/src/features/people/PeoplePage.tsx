@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 
 import Section from "ui/organisms/section";
-import Tile from "core/Tile";
+import Tile from "core/Tile/Tiles";
 import { Pager } from "core/Pager";
 import { CorePage } from "core/CorePage";
 import { usePeopleApiService } from "./peopleApiService";

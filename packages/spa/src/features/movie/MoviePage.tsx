@@ -1,7 +1,7 @@
 import React, { Suspense, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import Tile from "core/Tile";
+import Tile from "core/Tile/Tiles";
 import { CorePage } from "core/CorePage";
 import { Backdrop } from "./Backdrop";
 import { useMovieApiService } from "./movieApiService";

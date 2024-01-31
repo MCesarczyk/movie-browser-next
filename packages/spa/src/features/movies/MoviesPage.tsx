@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 
 import { MovieResult } from "./interfaces";
-import Tile from "core/Tile";
+import Tile from "core/Tile/Tiles";
 import { Pager } from "core/Pager";
 import { CorePage } from "core/CorePage";
 import { useMoviesApiService } from "./moviesApiService";
